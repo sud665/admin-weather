@@ -12,7 +12,12 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
+export const dynamic = 'force-dynamic';
+
 export default async function ContentListPage() {
+  if (!db) {
+    return <div><h1 className="mb-6 text-2xl font-bold">콘텐츠 관리</h1><p className="text-muted-foreground">데이터베이스가 연결되지 않았습니다.</p></div>;
+  }
   const allPages = await db.select().from(pages);
 
   return (

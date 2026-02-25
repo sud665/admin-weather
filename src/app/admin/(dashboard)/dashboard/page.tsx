@@ -3,7 +3,12 @@ import { pages, chartSettings, visualizationResults } from '@/db/schema';
 import { count } from 'drizzle-orm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminDashboard() {
+  if (!db) {
+    return <div><h1 className="mb-6 text-2xl font-bold">관리자 대시보드</h1><p className="text-muted-foreground">데이터베이스가 연결되지 않았습니다.</p></div>;
+  }
   const [pageCount] = await db.select({ count: count() }).from(pages);
   const [chartCount] = await db
     .select({ count: count() })

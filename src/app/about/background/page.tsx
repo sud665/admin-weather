@@ -2,12 +2,16 @@ import { db } from '@/db';
 import { pages } from '@/db/schema';
 import { eq } from 'drizzle-orm';
 
+export const dynamic = 'force-dynamic';
+
 export default async function BackgroundPage() {
-  const page = await db
-    .select()
-    .from(pages)
-    .where(eq(pages.slug, 'about/background'))
-    .limit(1);
+  const page = db
+    ? await db
+        .select()
+        .from(pages)
+        .where(eq(pages.slug, 'about/background'))
+        .limit(1)
+    : [];
   const content = page[0];
 
   return (

@@ -9,8 +9,7 @@
     "lint": "eslint",
     "seed": "npx tsx scripts/seed.ts",
     "db:push": "npx drizzle-kit push",
-    "db:studio": "npx drizzle-kit studio",
-    "vercel-build": "npx drizzle-kit push && next build"
+    "db:studio": "npx drizzle-kit studio"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.11.1",
