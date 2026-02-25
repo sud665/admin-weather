@@ -25,7 +25,7 @@ interface Props {
 
 export function ScenarioBarChart({ data, setting }: Props) {
   const chartData = data
-    .filter((d) => d.year % 10 === 3)
+    .filter((d) => d.year % 10 === 0)
     .map((d) => ({
       year: d.year.toString(),
       damageCost: d.damageCost ? Math.round(d.damageCost) : 0,

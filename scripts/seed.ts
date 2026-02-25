@@ -171,8 +171,8 @@ async function seed() {
   }
   console.log(`  ✓ ${totalSubParams}개 하위 파라미터, ${totalValues}개 값 생성`);
 
-  // 3. 목업 시각화 결과 생성
-  const years = Array.from({ length: 28 }, (_, i) => 2023 + i * 3);
+  // 3. 목업 시각화 결과 생성 (2020~2100, 매년)
+  const years = Array.from({ length: 81 }, (_, i) => 2020 + i);
   const combos = ['default', 'high-damage', 'low-discount', 'extreme'];
   let resultCount = 0;
 
@@ -180,7 +180,7 @@ async function seed() {
     const batch = years.map((year) => {
       const baseValue =
         combo === 'default' ? 50 : combo === 'high-damage' ? 120 : combo === 'low-discount' ? 80 : 200;
-      const yearFactor = (year - 2023) / 80;
+      const yearFactor = (year - 2020) / 80;
 
       return {
         combinationKey: combo,
@@ -192,6 +192,7 @@ async function seed() {
       };
     });
 
+    // 81개씩 한 번에 insert
     await db.insert(schema.visualizationResults).values(batch);
     resultCount += batch.length;
   }
