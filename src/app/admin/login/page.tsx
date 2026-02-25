@@ -13,6 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Shield } from 'lucide-react';
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState('');
@@ -41,11 +42,14 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="flex min-h-[60vh] items-center justify-center">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle>관리자 로그인</CardTitle>
-          <CardDescription>콘텐츠 관리를 위해 로그인하세요.</CardDescription>
+    <div className="flex min-h-[70vh] items-center justify-center px-4">
+      <Card className="animate-fade-in-up w-full max-w-sm shadow-lg">
+        <CardHeader className="text-center">
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+            <Shield className="h-6 w-6 text-muted-foreground" />
+          </div>
+          <CardTitle className="text-xl">관리자 로그인</CardTitle>
+          <CardDescription>콘텐츠 관리를 위해 로그인하세요</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -54,6 +58,7 @@ export default function AdminLoginPage() {
               <Input
                 id="email"
                 type="email"
+                placeholder="admin@climate.kr"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -69,8 +74,16 @@ export default function AdminLoginPage() {
                 required
               />
             </div>
-            {error && <p className="text-sm text-destructive">{error}</p>}
-            <Button type="submit" className="w-full" disabled={loading}>
+            {error && (
+              <p className="rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive">
+                {error}
+              </p>
+            )}
+            <Button
+              type="submit"
+              className="w-full bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600"
+              disabled={loading}
+            >
               {loading ? '로그인 중...' : '로그인'}
             </Button>
           </form>

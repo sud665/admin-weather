@@ -11,9 +11,10 @@ export default async function ApplicationsPage() {
   const content = page[0];
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold">{content?.title || '활용 방안'}</h1>
-      <div className="mt-6 whitespace-pre-wrap">
+    <div className="animate-fade-in">
+      <h1 className="text-3xl font-bold tracking-tight">{content?.title || '활용 방안'}</h1>
+      <div className="mt-1 h-1 w-12 rounded-full bg-emerald-500" />
+      <div className="mt-8 whitespace-pre-wrap text-base leading-relaxed text-muted-foreground">
         {content?.content || '콘텐츠가 준비 중입니다.'}
       </div>
     </div>

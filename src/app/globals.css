@@ -125,3 +125,44 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+
+/* Hero gradient */
+.hero-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% -20%, oklch(0.85 0.12 160 / 15%), transparent),
+              radial-gradient(ellipse 60% 50% at 80% 50%, oklch(0.7 0.1 220 / 8%), transparent);
+}
+
+.dark .hero-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% -20%, oklch(0.35 0.1 160 / 20%), transparent),
+              radial-gradient(ellipse 60% 50% at 80% 50%, oklch(0.25 0.08 220 / 15%), transparent);
+}

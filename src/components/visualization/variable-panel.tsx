@@ -72,7 +72,6 @@ export function VariablePanel({ onCombinationChange }: Props) {
 
   return (
     <div className="h-full overflow-y-auto p-4">
-      <h2 className="mb-4 text-sm font-bold">변수 선택</h2>
       <VariableSetAccordion
         sets={sets}
         selections={selections}
