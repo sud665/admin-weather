@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { VariablePanel } from '@/components/visualization/variable-panel';
+import { ChartArea } from '@/components/visualization/chart-area';
 
 export default function VisualizationPage() {
   const [combination, setCombination] = useState('default');
@@ -17,19 +18,9 @@ export default function VisualizationPage() {
           <VariablePanel onCombinationChange={setCombination} />
         </aside>
 
-        {/* 우측: 차트 영역 (Task 9에서 구현) */}
-        <section className="min-w-0 flex-1 space-y-6">
-          <div className="rounded-lg border bg-card p-6">
-            <p className="text-sm text-muted-foreground">
-              선택된 조합:{' '}
-              <code className="rounded bg-muted px-1.5 py-0.5">
-                {combination}
-              </code>
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground">
-              차트가 여기에 표시됩니다.
-            </p>
-          </div>
+        {/* 우측: 차트 영역 */}
+        <section className="min-w-0 flex-1">
+          <ChartArea combination={combination} />
         </section>
       </div>
     </div>
