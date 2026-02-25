@@ -5,12 +5,13 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { signOut } from 'next-auth/react';
-import { LayoutDashboard, FileText, BarChart3, LogOut } from 'lucide-react';
+import { LayoutDashboard, FileText, BarChart3, Database, LogOut } from 'lucide-react';
 
 const adminLinks = [
   { href: '/admin/dashboard', label: '대시보드', icon: LayoutDashboard },
   { href: '/admin/content', label: '콘텐츠 관리', icon: FileText },
   { href: '/admin/visualization', label: '시각화 설정', icon: BarChart3 },
+  { href: '/admin/data', label: '데이터 관리', icon: Database },
 ];
 
 export function AdminSidebar() {

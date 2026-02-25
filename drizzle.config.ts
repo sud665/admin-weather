@@ -1,5 +1,12 @@
 import { config } from 'dotenv';
-config({ path: '.env.local' });
+import { existsSync } from 'fs';
+
+if (existsSync('.env.local')) {
+  config({ path: '.env.local' });
+} else {
+  config();
+}
+
 import { defineConfig } from 'drizzle-kit';
 
 export default defineConfig({

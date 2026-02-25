@@ -5,7 +5,14 @@ export interface StorageAdapter {
 }
 
 export function getStorageAdapter(): StorageAdapter {
-  // 추후 STORAGE_PROVIDER 환경변수로 Cloudinary/S3 전환
+  const provider = process.env.STORAGE_PROVIDER || 'local';
+
+  if (provider === 'vercel-blob') {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { VercelBlobAdapter } = require('./vercel-blob-adapter');
+    return new VercelBlobAdapter();
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { LocalStorageAdapter } = require('./local-adapter');
   return new LocalStorageAdapter();
