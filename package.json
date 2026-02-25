@@ -10,7 +10,7 @@
     "seed": "npx tsx scripts/seed.ts",
     "db:push": "npx drizzle-kit push",
     "db:studio": "npx drizzle-kit studio",
-    "postinstall": "npx drizzle-kit push"
+    "vercel-build": "npx drizzle-kit push && next build"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.11.1",
