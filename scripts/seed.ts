@@ -11,6 +11,15 @@ const db = drizzle(client, { schema });
 async function seed() {
   console.log('Seeding database...');
 
+  // 0. 기존 데이터 정리 (역순으로 삭제)
+  await db.delete(schema.pages);
+  await db.delete(schema.chartSettings);
+  await db.delete(schema.visualizationResults);
+  await db.delete(schema.parameterValues);
+  await db.delete(schema.subParameters);
+  await db.delete(schema.variableSets);
+  console.log('  ✓ 기존 데이터 정리 완료');
+
   // 1. 변수 세트 생성
   const sets = await db
     .insert(schema.variableSets)

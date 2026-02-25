@@ -16,6 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { useChartColors } from '@/hooks/use-chart-colors';
 import type { VisualizationResult, ChartSetting } from '@/lib/types';
 
 interface Props {
@@ -24,6 +25,7 @@ interface Props {
 }
 
 export function TempDamageScatter({ data, setting }: Props) {
+  const colors = useChartColors();
   const chartData = data.map((d) => ({
     temperature: d.temperature
       ? Math.round(d.temperature * 100) / 100
@@ -46,24 +48,33 @@ export function TempDamageScatter({ data, setting }: Props) {
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
           <ScatterChart>
-            <CartesianGrid strokeDasharray="3 3" />
+            <CartesianGrid strokeDasharray="3 3" stroke={colors.grid} />
             <XAxis
               dataKey="temperature"
               name="기온 상승"
               unit="°C"
               fontSize={12}
+              tick={{ fill: colors.text }}
             />
             <YAxis
               dataKey="gdpLoss"
               name="GDP 손실"
               unit="%"
               fontSize={12}
+              tick={{ fill: colors.text }}
             />
-            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+            <Tooltip
+              cursor={{ strokeDasharray: '3 3' }}
+              contentStyle={{
+                backgroundColor: colors.tooltip.bg,
+                borderColor: colors.tooltip.border,
+                color: colors.tooltip.text,
+              }}
+            />
             <Scatter
               name="기온-피해"
               data={chartData}
-              fill="#ef4444"
+              fill={colors.scatter}
             />
           </ScatterChart>
         </ResponsiveContainer>

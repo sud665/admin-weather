@@ -16,6 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { useChartColors } from '@/hooks/use-chart-colors';
 import type { VisualizationResult, ChartSetting } from '@/lib/types';
 
 interface Props {
@@ -24,6 +25,7 @@ interface Props {
 }
 
 export function ScenarioBarChart({ data, setting }: Props) {
+  const colors = useChartColors();
   const chartData = data
     .filter((d) => d.year % 10 === 0)
     .map((d) => ({
@@ -46,14 +48,20 @@ export function ScenarioBarChart({ data, setting }: Props) {
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={chartData}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="year" fontSize={12} />
-            <YAxis fontSize={12} />
-            <Tooltip />
+            <CartesianGrid strokeDasharray="3 3" stroke={colors.grid} />
+            <XAxis dataKey="year" fontSize={12} tick={{ fill: colors.text }} />
+            <YAxis fontSize={12} tick={{ fill: colors.text }} />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: colors.tooltip.bg,
+                borderColor: colors.tooltip.border,
+                color: colors.tooltip.text,
+              }}
+            />
             <Bar
               dataKey="damageCost"
               name="피해비용"
-              fill="#f59e0b"
+              fill={colors.bar}
               radius={[4, 4, 0, 0]}
             />
           </BarChart>

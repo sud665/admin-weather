@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { NavLinks } from './nav-links';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export function Header() {
   return (
@@ -8,7 +9,10 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <span className="text-lg font-bold">기후변화 피해비용 시각화</span>
         </Link>
-        <NavLinks />
+        <div className="flex items-center gap-4">
+          <NavLinks />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
