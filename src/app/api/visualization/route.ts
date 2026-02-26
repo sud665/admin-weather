@@ -2,10 +2,15 @@ import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/db';
 import { visualizationResults } from '@/db/schema';
 import { eq, asc } from 'drizzle-orm';
+import { mockVisualizationResults } from '@/lib/mock-data';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const combinationKey = searchParams.get('combination') || 'default';
+
+  if (!db) {
+    return NextResponse.json(mockVisualizationResults[combinationKey] || []);
+  }
 
   const results = await db
     .select()

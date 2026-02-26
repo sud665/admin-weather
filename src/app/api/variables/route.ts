@@ -2,8 +2,13 @@ import { NextResponse } from 'next/server';
 import { db } from '@/db';
 import { variableSets, subParameters, parameterValues } from '@/db/schema';
 import { eq, asc } from 'drizzle-orm';
+import { mockVariableSets } from '@/lib/mock-data';
 
 export async function GET() {
+  if (!db) {
+    return NextResponse.json(mockVariableSets);
+  }
+
   const sets = await db
     .select()
     .from(variableSets)
