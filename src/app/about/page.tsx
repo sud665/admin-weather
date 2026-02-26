@@ -5,13 +5,16 @@ import { eq } from 'drizzle-orm';
 export const dynamic = 'force-dynamic';
 
 export default async function AboutPage() {
-  const page = db
-    ? await db
+  let page: { title?: string; content?: string | null }[] = [];
+  try {
+    if (db) {
+      page = await db
         .select()
         .from(pages)
         .where(eq(pages.slug, 'about'))
-        .limit(1)
-    : [];
+        .limit(1);
+    }
+  } catch {}
   const content = page[0];
 
   return (
