@@ -8,6 +8,10 @@ export async function GET() {
     return NextResponse.json(mockChartSettings);
   }
 
-  const settings = await db.select().from(chartSettings);
-  return NextResponse.json(settings);
+  try {
+    const settings = await db.select().from(chartSettings);
+    return NextResponse.json(settings);
+  } catch {
+    return NextResponse.json(mockChartSettings);
+  }
 }

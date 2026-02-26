@@ -12,11 +12,15 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(mockVisualizationResults[combinationKey] || []);
   }
 
-  const results = await db
-    .select()
-    .from(visualizationResults)
-    .where(eq(visualizationResults.combinationKey, combinationKey))
-    .orderBy(asc(visualizationResults.year));
+  try {
+    const results = await db
+      .select()
+      .from(visualizationResults)
+      .where(eq(visualizationResults.combinationKey, combinationKey))
+      .orderBy(asc(visualizationResults.year));
 
-  return NextResponse.json(results);
+    return NextResponse.json(results);
+  } catch {
+    return NextResponse.json(mockVisualizationResults[combinationKey] || []);
+  }
 }

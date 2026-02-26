@@ -9,33 +9,37 @@ export async function GET() {
     return NextResponse.json(mockVariableSets);
   }
 
-  const sets = await db
-    .select()
-    .from(variableSets)
-    .orderBy(asc(variableSets.order));
+  try {
+    const sets = await db
+      .select()
+      .from(variableSets)
+      .orderBy(asc(variableSets.order));
 
-  const result = await Promise.all(
-    sets.map(async (set) => {
-      const params = await db
-        .select()
-        .from(subParameters)
-        .where(eq(subParameters.setId, set.id))
-        .orderBy(asc(subParameters.order));
+    const result = await Promise.all(
+      sets.map(async (set) => {
+        const params = await db
+          .select()
+          .from(subParameters)
+          .where(eq(subParameters.setId, set.id))
+          .orderBy(asc(subParameters.order));
 
-      const paramsWithValues = await Promise.all(
-        params.map(async (param) => {
-          const values = await db
-            .select()
-            .from(parameterValues)
-            .where(eq(parameterValues.subParameterId, param.id))
-            .orderBy(asc(parameterValues.order));
-          return { ...param, values };
-        })
-      );
+        const paramsWithValues = await Promise.all(
+          params.map(async (param) => {
+            const values = await db
+              .select()
+              .from(parameterValues)
+              .where(eq(parameterValues.subParameterId, param.id))
+              .orderBy(asc(parameterValues.order));
+            return { ...param, values };
+          })
+        );
 
-      return { ...set, subParameters: paramsWithValues };
-    })
-  );
+        return { ...set, subParameters: paramsWithValues };
+      })
+    );
 
-  return NextResponse.json(result);
+    return NextResponse.json(result);
+  } catch {
+    return NextResponse.json(mockVariableSets);
+  }
 }
