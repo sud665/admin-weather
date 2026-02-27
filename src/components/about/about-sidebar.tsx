@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const aboutLinks = [
-  { href: '/about', label: '모델 소개' },
+  { href: '/about', label: '플랫폼 소개' },
   { href: '/about/background', label: '연구 배경' },
-  { href: '/about/methodology', label: '모형 개요' },
+  { href: '/about/methodology', label: '분석 방법론' },
   { href: '/about/applications', label: '활용 방안' },
 ];
 

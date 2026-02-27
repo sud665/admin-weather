@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 const links = [
   { href: '/', label: '홈' },
   { href: '/visualization', label: '데이터 시각화' },
-  { href: '/about', label: '모델 소개' },
+  { href: '/about', label: '플랫폼 소개' },
 ];
 
 export function NavLinks() {

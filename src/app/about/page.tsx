@@ -20,7 +20,7 @@ export default async function AboutPage() {
   return (
     <div className="animate-fade-in">
       <h1 className="text-3xl font-bold tracking-tight">
-        {content?.title || '모델 소개'}
+        {content?.title || '플랫폼 소개'}
       </h1>
       <div className="mt-1 h-1 w-12 rounded-full bg-emerald-500" />
       <div className="mt-8 whitespace-pre-wrap text-base leading-relaxed text-muted-foreground">

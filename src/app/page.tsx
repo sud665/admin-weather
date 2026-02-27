@@ -41,7 +41,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-24 sm:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <p className="animate-fade-in-up text-sm font-medium uppercase tracking-widest text-muted-foreground">
-              한국형 앙상블 기후변화통합평가모형
+              EcoVision 통합 환경분석 플랫폼
             </p>
             <h1 className="animate-fade-in-up stagger-1 mt-4 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               기후변화 피해비용
@@ -51,8 +51,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="animate-fade-in-up stagger-2 mt-6 text-lg leading-relaxed text-muted-foreground">
-              변수를 조정하여 기후변화가 초래하는 경제적 피해비용의 변화를
-              탐색하세요. 사전 계산된 연구 데이터를 인터랙티브 시각화로
+              변수를 조정하여 다양한 환경 시나리오를 비교·분석하세요.
+              사전 계산된 연구 데이터를 인터랙티브 시각화로
               확인할 수 있습니다.
             </p>
             <div className="animate-fade-in-up stagger-3 mt-10 flex justify-center gap-4">
@@ -60,7 +60,7 @@ export default function HomePage() {
                 <Link href="/visualization">데이터 시각화 시작</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/about">모델 소개</Link>
+                <Link href="/about">플랫폼 소개</Link>
               </Button>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
             지금 바로 데이터를 탐색해 보세요
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            기후에너지환경부 국가과제로 개발된 연구 결과를 누구나 확인할 수
+            EcoVision Research Lab에서 개발된 연구 결과를 누구나 확인할 수
             있습니다
           </p>
           <Button asChild className="mt-6 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-600">

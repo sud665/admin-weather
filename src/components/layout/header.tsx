@@ -11,7 +11,7 @@ export function Header() {
           <div className="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-600 dark:bg-emerald-500">
             <Globe className="h-4 w-4 text-white" />
           </div>
-          <span className="text-sm font-bold tracking-tight">Climate IAM</span>
+          <span className="text-sm font-bold tracking-tight">EcoVision Analytics</span>
         </Link>
         <div className="flex items-center gap-1">
           <NavLinks />

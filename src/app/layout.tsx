@@ -5,9 +5,9 @@ import { ThemeProvider } from '@/components/theme-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '기후변화 피해비용 시각화',
+  title: '환경 데이터 인사이트 대시보드',
   description:
-    '한국형 앙상블 기후변화통합평가모형(IAM) 연구 결과 시각화',
+    'EcoVision 통합 환경분석 플랫폼 - 환경 시나리오 데이터 시각화',
 };
 
 export default function RootLayout({

@@ -19,7 +19,7 @@ export default async function MethodologyPage() {
 
   return (
     <div className="animate-fade-in">
-      <h1 className="text-3xl font-bold tracking-tight">{content?.title || '모형 개요'}</h1>
+      <h1 className="text-3xl font-bold tracking-tight">{content?.title || '분석 방법론'}</h1>
       <div className="mt-1 h-1 w-12 rounded-full bg-emerald-500" />
       <div className="mt-8 whitespace-pre-wrap text-base leading-relaxed text-muted-foreground">
         {content?.content || '콘텐츠가 준비 중입니다.'}

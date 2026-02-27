@@ -1,4 +1,4 @@
-# 기후변화 피해비용 시각화 웹사이트 구현 계획
+# 환경 데이터 인사이트 대시보드 웹사이트 구현 계획
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
@@ -414,9 +414,9 @@ async function seed() {
 
   // 5. CMS 페이지 시드
   await db.insert(schema.pages).values([
-    { slug: 'about', title: '모델 소개', content: '한국형 앙상블 기후변화통합평가모형(IAM)은 기후에너지환경부의 국가과제로 개발되었습니다.', published: true },
+    { slug: 'about', title: '플랫폼 소개', content: 'EcoVision 통합 환경분석 플랫폼은 EcoVision Research Lab에서 개발되었습니다.', published: true },
     { slug: 'about/background', title: '연구 배경', content: '해외 탄소의 사회적 비용(SCC) 추정 기술을 국내 상황에 맞게 고도화하는 연구입니다.', published: true },
-    { slug: 'about/methodology', title: '모형 개요', content: '본 모형은 기후 모듈, 경제 모듈, 피해 모듈을 통합한 앙상블 접근법을 사용합니다.', published: true },
+    { slug: 'about/methodology', title: '분석 방법론', content: '본 모형은 기후 모듈, 경제 모듈, 피해 모듈을 통합한 앙상블 접근법을 사용합니다.', published: true },
     { slug: 'about/applications', title: '활용 방안', content: '정책 결정, 탄소 가격 산정, 기후 적응 전략 수립 등에 활용됩니다.', published: true },
   ]);
 
@@ -498,7 +498,7 @@ import { cn } from '@/lib/utils';
 const links = [
   { href: '/', label: '홈' },
   { href: '/visualization', label: '데이터 시각화' },
-  { href: '/about', label: '모델 소개' },
+  { href: '/about', label: '플랫폼 소개' },
 ];
 
 export function NavLinks() {
@@ -535,7 +535,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-lg font-bold">기후변화 피해비용 시각화</span>
+          <span className="text-lg font-bold">환경 데이터 인사이트 대시보드</span>
         </Link>
         <NavLinks />
       </div>
@@ -552,8 +552,8 @@ export function Footer() {
   return (
     <footer className="border-t bg-muted/50">
       <div className="container mx-auto flex flex-col items-center gap-2 px-4 py-8 text-center text-sm text-muted-foreground">
-        <p>기후에너지환경부 국가과제</p>
-        <p>한국형 앙상블 기후변화통합평가모형(IAM) 연구</p>
+        <p>EcoVision Research Lab</p>
+        <p>EcoVision 통합 환경분석 플랫폼</p>
         <p className="mt-2">&copy; {new Date().getFullYear()} All rights reserved.</p>
       </div>
     </footer>
@@ -571,8 +571,8 @@ import { Footer } from '@/components/layout/footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '기후변화 피해비용 시각화',
-  description: '한국형 앙상블 기후변화통합평가모형(IAM) 연구 결과 시각화',
+  title: '환경 데이터 인사이트 대시보드',
+  description: 'EcoVision 통합 환경분석 플랫폼 - 환경 시나리오 데이터 시각화',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -630,15 +630,15 @@ export default function HomePage() {
           <span className="text-primary">통합평가 모델</span>
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">
-          한국형 앙상블 기후변화통합평가모형(IAM)의 연구 결과를 인터랙티브 시각화로 확인하세요.
-          변수를 조정하여 기후변화가 초래하는 경제적 피해비용의 변화를 탐색할 수 있습니다.
+          EcoVision 통합 환경분석 플랫폼의 연구 결과를 인터랙티브 시각화로 확인하세요.
+          변수를 조정하여 다양한 환경 시나리오를 비교·분석하세요.
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild size="lg">
             <Link href="/visualization">데이터 시각화 시작</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/about">모델 소개</Link>
+            <Link href="/about">플랫폼 소개</Link>
           </Button>
         </div>
       </section>
@@ -1009,7 +1009,7 @@ export default function VisualizationPage() {
 
   return (
     <div className="container mx-auto px-4 py-6">
-      <h1 className="mb-6 text-2xl font-bold">기후변화 피해비용 데이터 시각화</h1>
+      <h1 className="mb-6 text-2xl font-bold">환경 시나리오 데이터 시각화</h1>
       <div className="flex gap-6">
         {/* 좌측: 변수 선택 패널 */}
         <aside className="w-72 shrink-0 rounded-lg border bg-card">
@@ -1363,7 +1363,7 @@ export default function VisualizationPage() {
 
   return (
     <div className="container mx-auto px-4 py-6">
-      <h1 className="mb-6 text-2xl font-bold">기후변화 피해비용 데이터 시각화</h1>
+      <h1 className="mb-6 text-2xl font-bold">환경 시나리오 데이터 시각화</h1>
       <div className="flex gap-6">
         <aside className="w-72 shrink-0 rounded-lg border bg-card">
           <VariablePanel onCombinationChange={setCombination} />
@@ -1414,9 +1414,9 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 const aboutLinks = [
-  { href: '/about', label: '모델 소개' },
+  { href: '/about', label: '플랫폼 소개' },
   { href: '/about/background', label: '연구 배경' },
-  { href: '/about/methodology', label: '모형 개요' },
+  { href: '/about/methodology', label: '분석 방법론' },
   { href: '/about/applications', label: '활용 방안' },
 ];
 
@@ -1480,7 +1480,7 @@ export default async function AboutPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold">{content?.title || '모델 소개'}</h1>
+      <h1 className="text-3xl font-bold">{content?.title || '플랫폼 소개'}</h1>
       <div className="mt-6 whitespace-pre-wrap">{content?.content || '콘텐츠가 준비 중입니다.'}</div>
     </div>
   );

@@ -248,9 +248,9 @@ async function seed() {
   await db.insert(schema.pages).values([
     {
       slug: 'about',
-      title: '모델 소개',
+      title: '플랫폼 소개',
       content:
-        '한국형 앙상블 기후변화통합평가모형(IAM)은 기후에너지환경부의 국가과제로 개발되었습니다.\n\n해외의 탄소의 사회적 비용(SCC) 추정 기술을 국내 상황에 맞게 고도화하여, 한국의 기후변화 대응 정책 수립에 과학적 근거를 제공합니다.',
+        'EcoVision 통합 환경분석 플랫폼은 EcoVision Research Lab에서 개발되었습니다.\n\n탄소의 사회적 비용(SCC) 추정 기술을 고도화하여, 환경 대응 정책 수립에 과학적 근거를 제공합니다.',
       published: true,
     },
     {
@@ -262,7 +262,7 @@ async function seed() {
     },
     {
       slug: 'about/methodology',
-      title: '모형 개요',
+      title: '분석 방법론',
       content:
         '본 모형은 세 가지 핵심 모듈로 구성됩니다:\n\n1. 기후 모듈: 온실가스 배출에 따른 대기 농도 변화와 기온 상승을 시뮬레이션합니다.\n2. 경제 모듈: GDP 성장, 인구 변화, 기술 발전 등 거시경제 변수를 예측합니다.\n3. 피해 모듈: 기온 상승이 다양한 부문(농업, 보건, 인프라 등)에 미치는 경제적 피해를 산정합니다.',
       published: true,
