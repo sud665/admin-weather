@@ -16,20 +16,37 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
 
-        const [user] = await db
-          .select()
-          .from(adminUsers)
-          .where(eq(adminUsers.email, credentials.email as string));
+        // DB 연결 시도
+        try {
+          if (db) {
+            const [user] = await db
+              .select()
+              .from(adminUsers)
+              .where(eq(adminUsers.email, credentials.email as string));
 
-        if (!user) return null;
+            if (!user) return null;
 
-        const valid = await bcrypt.compare(
-          credentials.password as string,
-          user.passwordHash
-        );
-        if (!valid) return null;
+            const valid = await bcrypt.compare(
+              credentials.password as string,
+              user.passwordHash
+            );
+            if (!valid) return null;
 
-        return { id: user.id, email: user.email, name: user.name };
+            return { id: user.id, email: user.email, name: user.name };
+          }
+        } catch {
+          // DB 연결 실패 시 목업 계정으로 폴백
+        }
+
+        // 목업 로그인 (DB 미연결 시)
+        if (
+          credentials.email === 'admin@ecovision.dev' &&
+          credentials.password === 'demo1234'
+        ) {
+          return { id: 'mock-admin', email: 'admin@ecovision.dev', name: 'Demo Admin' };
+        }
+
+        return null;
       },
     }),
   ],
