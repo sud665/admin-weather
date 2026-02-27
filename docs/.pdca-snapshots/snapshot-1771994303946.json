@@ -1,0 +1,631 @@
+{
+  "timestamp": "2026-02-25T04:38:23.945Z",
+  "reason": "compaction",
+  "status": {
+    "version": "2.0",
+    "lastUpdated": "2026-02-25T04:07:26.301Z",
+    "activeFeatures": [
+      "admin-weather",
+      "db",
+      "scripts",
+      "layout",
+      "variables",
+      "visualization",
+      "chart-settings",
+      "charts",
+      "about",
+      "background",
+      "methodology",
+      "applications",
+      "login",
+      "admin",
+      "dashboard",
+      "[id]",
+      "content",
+      "[slug]",
+      "(dashboard)",
+      "storage",
+      "upload"
+    ],
+    "primaryFeature": "admin-weather",
+    "features": {
+      "admin-weather": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T02:14:11.692Z",
+          "lastUpdated": "2026-02-25T03:53:31.721Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/middleware.ts"
+      },
+      "db": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T02:23:49.391Z",
+          "lastUpdated": "2026-02-25T02:24:06.621Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/db/schema.ts"
+      },
+      "scripts": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T02:35:17.353Z",
+          "lastUpdated": "2026-02-25T04:07:21.304Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/scripts/seed.ts"
+      },
+      "layout": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T02:36:25.750Z",
+          "lastUpdated": "2026-02-25T02:36:41.555Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/components/layout/footer.tsx"
+      },
+      "variables": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:45:04.971Z",
+          "lastUpdated": "2026-02-25T03:45:04.972Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/api/variables/route.ts"
+      },
+      "visualization": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:45:12.442Z",
+          "lastUpdated": "2026-02-25T04:03:42.699Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/admin/(dashboard)/visualization/page.tsx"
+      },
+      "chart-settings": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:45:17.283Z",
+          "lastUpdated": "2026-02-25T04:03:26.053Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/api/admin/chart-settings/route.ts"
+      },
+      "charts": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:47:51.340Z",
+          "lastUpdated": "2026-02-25T04:07:26.301Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/components/visualization/charts/scenario-bar-chart.tsx"
+      },
+      "about": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:52:30.734Z",
+          "lastUpdated": "2026-02-25T03:52:35.441Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/about/page.tsx"
+      },
+      "background": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:52:41.455Z",
+          "lastUpdated": "2026-02-25T03:52:41.455Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/about/background/page.tsx"
+      },
+      "methodology": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:52:42.867Z",
+          "lastUpdated": "2026-02-25T03:52:42.867Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/about/methodology/page.tsx"
+      },
+      "applications": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:52:44.748Z",
+          "lastUpdated": "2026-02-25T03:52:44.748Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/about/applications/page.tsx"
+      },
+      "login": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:53:44.508Z",
+          "lastUpdated": "2026-02-25T03:55:19.890Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/admin/login/layout.tsx"
+      },
+      "admin": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:54:34.681Z",
+          "lastUpdated": "2026-02-25T03:54:47.235Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/api/admin/pages/route.ts"
+      },
+      "dashboard": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:54:40.904Z",
+          "lastUpdated": "2026-02-25T03:54:40.904Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/admin/dashboard/page.tsx"
+      },
+      "[id]": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:54:49.719Z",
+          "lastUpdated": "2026-02-25T04:03:28.865Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/api/admin/chart-settings/[id]/route.ts"
+      },
+      "content": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:54:58.270Z",
+          "lastUpdated": "2026-02-25T03:54:58.270Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/admin/content/page.tsx"
+      },
+      "[slug]": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:55:06.408Z",
+          "lastUpdated": "2026-02-25T03:55:06.408Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/admin/content/[slug]/page.tsx"
+      },
+      "(dashboard)": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T03:55:42.977Z",
+          "lastUpdated": "2026-02-25T03:55:42.977Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/admin/(dashboard)/layout.tsx"
+      },
+      "storage": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T04:04:17.601Z",
+          "lastUpdated": "2026-02-25T04:04:20.580Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/lib/storage/local-adapter.ts"
+      },
+      "upload": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-02-25T04:04:23.476Z",
+          "lastUpdated": "2026-02-25T04:04:23.476Z"
+        },
+        "lastFile": "/Users/max/Desktop/wishket/admin-weather/src/app/api/admin/upload/route.ts"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-02-25T01:14:25.007Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-02-25T04:07:26.301Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-02-25T02:14:11.692Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:23:39.657Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:23:49.391Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:24:06.621Z",
+        "feature": "db",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:24:33.185Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:35:17.353Z",
+        "feature": "scripts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:36:25.750Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:36:33.115Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:36:41.555Z",
+        "feature": "layout",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:36:53.768Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T02:42:07.220Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:45:04.972Z",
+        "feature": "variables",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:45:12.443Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:45:17.283Z",
+        "feature": "chart-settings",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:46:07.323Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:46:24.125Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:46:37.557Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:46:52.782Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:47:35.330Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:47:51.340Z",
+        "feature": "charts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:48:00.170Z",
+        "feature": "charts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:48:09.659Z",
+        "feature": "charts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:48:22.960Z",
+        "feature": "charts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:48:34.233Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:48:45.122Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:52:30.734Z",
+        "feature": "about",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:52:32.771Z",
+        "feature": "about",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:52:35.441Z",
+        "feature": "about",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:52:41.455Z",
+        "feature": "background",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:52:42.867Z",
+        "feature": "methodology",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:52:44.748Z",
+        "feature": "applications",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:53:29.209Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:53:31.721Z",
+        "feature": "admin-weather",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:53:44.508Z",
+        "feature": "login",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:53:45.989Z",
+        "feature": "scripts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:54:34.681Z",
+        "feature": "admin",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:54:35.913Z",
+        "feature": "admin",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:54:40.904Z",
+        "feature": "dashboard",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:54:47.235Z",
+        "feature": "admin",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:54:49.719Z",
+        "feature": "[id]",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:54:58.270Z",
+        "feature": "content",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:55:06.408Z",
+        "feature": "[slug]",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:55:19.890Z",
+        "feature": "login",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T03:55:42.977Z",
+        "feature": "(dashboard)",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:03:26.053Z",
+        "feature": "chart-settings",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:03:28.865Z",
+        "feature": "[id]",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:03:42.699Z",
+        "feature": "visualization",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:04:17.601Z",
+        "feature": "storage",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:04:20.580Z",
+        "feature": "storage",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:04:23.476Z",
+        "feature": "upload",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:07:21.304Z",
+        "feature": "scripts",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-02-25T04:07:26.301Z",
+        "feature": "charts",
+        "phase": "do",
+        "action": "updated"
+      }
+    ]
+  }
+}
