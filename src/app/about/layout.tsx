@@ -11,7 +11,7 @@ export default function AboutLayout({
         <aside className="w-48 shrink-0">
           <div className="sticky top-20">
             <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              모델 문서
+              플랫폼 문서
             </p>
             <AboutSidebar />
           </div>
